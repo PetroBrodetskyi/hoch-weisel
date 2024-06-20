@@ -31,14 +31,21 @@
     font-family: inherit;
     cursor: pointer;
     transition: border-color 0.5s;
+    background-color: transparent;
 }
 
 .btn:hover,
 .btn:focus {
     border: 2px solid #EBD815;
+    background-color: transparent;
 }
 
 .icon {
     width: 1em;
     height: 1em;
+}
+
+.selected {
+    border: 2px solid #EBD815;
+    background-color: transparent;
 }
