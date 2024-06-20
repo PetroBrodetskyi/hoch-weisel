@@ -1,12 +1,12 @@
 import css from './Footer.module.css';
 import hochweiselLogo from '../../assets/images/hochweisel.png';
 
-const Header = () => {
+const Footer = () => {
     return (
-        <header className={css.footer}>
-            <h2>Petro Brodetskyi</h2>
-        </header>
+        <footer className={css.footer}>
+            <h2 className={css.title}>Petro Brodetskyi</h2>
+        </footer>
     );
 };
 
-export default Header;
+export default Footer;

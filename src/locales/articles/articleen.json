@@ -1,0 +1,19 @@
+{
+  "home": {
+    "title": "Home",
+    "description": "",
+    "article1": {
+      "title": "Welcome to Hoch-Weisel",
+      "content": "Hoch-Weisel is located at the border of the Eastern Hintertaunus in the west and the Wetterau in the east. At the eastern edge of the Taunus Nature Park, it is situated 4.4 km southwest of the center of Butzbach, southeast below the Hausberg (485.7 m). The near-source upper course of the Wetter tributary Riedgraben flows through Hoch-Weisel, and slightly north of the village, its tributary Lattwiesengraben originates. The state road 3056 (Butzbach–Hoch-Weisel–Fauerbach) runs through the village. The district area is 1022 hectares, of which 519 ha are forested (as of 1961). The forest areas lie west of the village and extend in a narrowing wedge up to the Gickel (505.1 m) shortly before Bodenrod.",
+      "image": "../../assets/images/hochweisel.png"
+    }
+  },
+  "events": {
+    "title": "Events",
+    "description": "Upcoming events"
+  },
+  "history": {
+    "title": "History",
+    "description": "Our history"
+  }
+}

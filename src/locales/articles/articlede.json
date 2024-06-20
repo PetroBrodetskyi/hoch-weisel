@@ -1,0 +1,19 @@
+{
+  "home": {
+    "title": "Zuhause",
+    "description": "",
+    "article1": {
+      "title": "Willkommen in Hoch-Weisel",
+      "content": "Hoch-Weisel liegt an der Grenze vom Östlichen Hintertaunus im Westen, zur Wetterau im Osten. An der Ostgrenze des Naturparks Taunus befindet es sich 4,4 km südwestlich des Ortskerns von Butzbach, südöstlich unterhalb des Hausberges (485,7 m). Durch Hoch-Weisel fließt der quellnahe Oberlaufbereich des Wetter-Zuflusses Riedgraben, und etwas nördlich der Ortschaft entspringt dessen Zufluss Lattwiesengraben. Hindurch führt die Landesstraße 3056 (Butzbach–Hoch-Weisel–Fauerbach). Die Gemarkungsfläche beträgt 1022 Hektar, davon sind 519 ha bewaldet (Stand: 1961). Die Waldflächen liegen westlich der Ortschaft und erstrecken sich in einem schmaler werdenden Keil bis zum Gickel (505,1 m) kurz vor Bodenrod.",
+      "image": "../../assets/images/hochweisel.png"
+    }
+  },
+  "events": {
+    "title": "Veranstaltungen",
+    "description": "Bevorstehende Veranstaltungen"
+  },
+  "history": {
+    "title": "Geschichte",
+    "description": "Unsere Geschichte"
+  }
+}

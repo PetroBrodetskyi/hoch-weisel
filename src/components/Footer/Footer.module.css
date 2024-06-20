@@ -1,4 +1,12 @@
 .footer {
-    background-color: #EBD815;
+    height: 280px;
+    background: linear-gradient(to bottom, #FFFFFF, #EBD815);
     padding: 20px;
+}
+
+.title {
+    display: flex;
+    width: 50%;
+    font-size: 20px;
+    color: #FFFFFF;
 }
