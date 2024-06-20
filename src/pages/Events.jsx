@@ -4,7 +4,7 @@ function Events() {
   const { t } = useTranslation();
   return (
     <div>
-      <h1>{t('events.title')}</h1>
+      <h2>{t('events.title')}</h2>
       <p>{t('events.description')}</p>
     </div>
   );

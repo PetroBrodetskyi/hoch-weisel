@@ -1,0 +1,22 @@
+.navLanguage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.links {
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+    
+}
+
+.link {
+    color: #242424;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
