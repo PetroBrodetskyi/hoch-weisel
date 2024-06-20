@@ -1,3 +1,9 @@
 .home {
+    display: flex;
+    gap: 40px;
     padding-top: 200px;
+}
+
+.image {
+    width: 340px;
 }
