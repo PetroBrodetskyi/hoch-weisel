@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import History from './pages/History';
 import './index.css';
-import './i18n'; // Імпорт i18n конфігурації
+import './i18n';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
