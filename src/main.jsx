@@ -19,5 +19,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Route>
       </Routes>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
