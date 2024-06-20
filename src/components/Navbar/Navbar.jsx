@@ -15,11 +15,11 @@ function Navbar() {
         <li><Link to="/events">{i18n.t('events.title')}</Link></li>
         <li><Link to="/history">{i18n.t('history.title')}</Link></li>
       </ul>
-      <div>
-        <button onClick={() => changeLanguage('ua')}>UA</button>
-        <button onClick={() => changeLanguage('de')}>DE</button>
-        <button onClick={() => changeLanguage('en')}>EN</button>
-      </div>
+        <div>
+            <button onClick={() => changeLanguage('de')}>DE</button>
+            <button onClick={() => changeLanguage('ua')}>UA</button>
+            <button onClick={() => changeLanguage('en')}>EN</button>
+        </div>
     </nav>
   );
 }
