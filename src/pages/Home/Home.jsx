@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Article from '../components/Article/Article';
-import css from '../pages/Home';
+import Article from '../../components/Article/Article';
+import css from '../Home/Home.module.css';
 
 const Home = () => {
   const { t } = useTranslation();

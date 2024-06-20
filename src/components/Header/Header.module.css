@@ -1,12 +1,17 @@
 .headerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
     padding: 30px 20px;
+    width: 1280px;
+    background-color: white;
 }
 
 .header {
     display: flex;
     gap: 20px;
     align-items: center;
-    
 }
 
 .logo {

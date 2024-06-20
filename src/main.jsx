@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import Events from './pages/Events';
 import History from './pages/History';
 import './index.css';
