@@ -51,7 +51,7 @@ const Navbar = () => {
                         />
                         <label htmlFor={code} className={`${css.btn} ${selectedLanguage === code ? css.selected : ''}`}>
                             <svg className={css.icon}>
-                                <use href={`${icons}#${flag}`} />
+                                <use xlinkHref={`${icons}#${flag}`} />
                             </svg>
                             <p className={css.labelTitle}>{label}</p>
                         </label>
