@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import css from './Navbar.module.css';
-import iconsUrl from '../../assets/icons/icons.svg';
+import icons from '../../assets/icons.svg';
 
 const Navbar = () => {
     const { t, i18n } = useTranslation();
@@ -49,7 +49,7 @@ const Navbar = () => {
                             className={css.radio}
                         />
                         <svg className={css.icon}>
-                            <use href={`${iconsUrl}#${flag}`} />
+                            <use href={`${icons}#${flag}`} />
                         </svg>
                         {label}
                     </label>
