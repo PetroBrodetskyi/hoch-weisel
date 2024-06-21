@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import css from './Navbar.module.css';
 import icons from '../../assets/icons/icons.svg';
@@ -33,9 +33,9 @@ const Navbar = () => {
     return (
         <nav className={css.navLanguage}>
             <ul className={css.links}>
-                <li><Link className={css.link} to="/">{t('home.title')}</Link></li>
-                <li><Link className={css.link} to="/events">{t('events.title')}</Link></li>
-                <li><Link className={css.link} to="/history">{t('history.title')}</Link></li>
+                <li><NavLink className={({ isActive }) => isActive ? `${css.link} ${css.active}` : css.link} to="/">{t('home.title')}</NavLink></li>
+                <li><NavLink className={({ isActive }) => isActive ? `${css.link} ${css.active}` : css.link} to="/events">{t('events.title')}</NavLink></li>
+                <li><NavLink className={({ isActive }) => isActive ? `${css.link} ${css.active}` : css.link} to="/history">{t('history.title')}</NavLink></li>
             </ul>
             <div className={css.buttons}>
                 {languages.map(({ code, label, id }) => (

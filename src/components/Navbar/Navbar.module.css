@@ -9,14 +9,39 @@
     display: flex;
     gap: 120px;
     justify-content: center;
+    position: relative;
 }
 
 .link {
     color: #242424;
+    position: relative;
+    padding: 0 18px;
+    font-weight: 500;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 36px);
+    height: 6px;
+    left: 18px;
+    bottom: -10px;
+    background: linear-gradient(to bottom, #FFFFFF, #EBD815);
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.link.active::after,
+.link:hover::after {
+    opacity: 1;
 }
 
 .radio {
-    position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
@@ -41,27 +66,29 @@
 }
 
 .btn {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 8px;
     border-radius: 8px;
-    border: 2px solid transparent;
-    padding: 4px 18px;
+    padding: 0 18px;
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
     transition: border-color 0.5s, box-shadow 0.3s, transform 0.3s;
     background-color: transparent;
-    position: relative;
     z-index: 1;
-    overflow: hidden;
 }
 
-.btn:hover,
-.btn:focus {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-    border: 2px solid #EBD815;
+.btn.selected::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 36px);
+    height: 6px;
+    left: 18px;
+    bottom: -10px;
+    background: linear-gradient(to bottom, #FFFFFF, #EBD815);
+    border-radius: 4px;
 }
 
 .icon {
@@ -70,7 +97,6 @@
 }
 
 .selected {
-    border: 2px solid #EBD815;
     background-color: transparent;
 }
 
