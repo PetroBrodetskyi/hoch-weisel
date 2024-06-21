@@ -34,6 +34,12 @@
     gap: 10px;
 }
 
+.radioItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .btn {
     display: flex;
     align-items: center;
@@ -44,7 +50,7 @@
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: border-color 0.5s, box-shadow 0.3s, transform 0.3s;
     background-color: transparent;
     position: relative;
     z-index: 1;
@@ -55,7 +61,7 @@
 .btn:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
-    background-color: transparent;
+    border: 2px solid #EBD815;
 }
 
 .icon {
@@ -66,4 +72,8 @@
 .selected {
     border: 2px solid #EBD815;
     background-color: transparent;
+}
+
+.labelTitle {
+    margin: 0;
 }

@@ -8,12 +8,6 @@ const Navbar = () => {
     const { t, i18n } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
-    const languages = [
-        { code: 'de', label: 'DE', flag: 'flag-germany' },
-        { code: 'ua', label: 'UA', flag: 'flag-ukraine' },
-        { code: 'en', label: 'EN', flag: 'flag-kingdom' }
-    ];
-
     useEffect(() => {
         const handleLanguageChanged = (lng) => {
             setSelectedLanguage(lng);
@@ -29,6 +23,12 @@ const Navbar = () => {
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
+
+    const languages = [
+        { code: 'de', label: 'DE', flag: 'flag-germany' },
+        { code: 'ua', label: 'UA', flag: 'flag-ukraine' },
+        { code: 'en', label: 'EN', flag: 'flag-kingdom' }
+    ];
 
     return (
         <nav className={css.navLanguage}>
@@ -51,7 +51,7 @@ const Navbar = () => {
                         />
                         <label htmlFor={code} className={`${css.btn} ${selectedLanguage === code ? css.selected : ''}`}>
                             <svg className={css.icon}>
-                                <use href={`${icons}#${flag}`} />
+                                <use xlinkHref={`${icons}#${flag}`} />
                             </svg>
                             <p className={css.labelTitle}>{label}</p>
                         </label>
