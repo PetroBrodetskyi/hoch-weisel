@@ -1,9 +1,22 @@
+.homeFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container {
+    width: 80%;
+}
+
 .home {
     display: flex;
+    justify-content: space-between;
     gap: 40px;
     padding-top: 200px;
 }
 
 .image {
-    width: 340px;
+    display: flex;
+    padding: 20px;
+    width: 300px;
 }

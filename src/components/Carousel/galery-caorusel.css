@@ -1,0 +1,40 @@
+.carousel-root {
+  width: 100%;
+}
+
+.carousel .carousel-slider {
+  display: flex;
+  justify-content: center;
+}
+
+
+.carousel .slider-wrapper {
+  overflow: hidden;
+}
+
+.carousel .slider {
+  display: flex;
+  width: calc(100% * 3);
+  transition: transform 2s ease;
+}
+
+.carousel .slider .control-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .slider .control-next {
+  right: 0;
+}
+
+.carousel .slider .control-prev {
+  left: 0;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
