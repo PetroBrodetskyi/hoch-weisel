@@ -15,6 +15,20 @@
     color: #242424;
 }
 
+.radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .buttons {
     display: flex;
     gap: 10px;
@@ -30,13 +44,17 @@
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
-    transition: border-color 0.5s;
+    transition: all 0.3s ease;
     background-color: transparent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .btn:hover,
 .btn:focus {
-    border: 2px solid #EBD815;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
     background-color: transparent;
 }
 
