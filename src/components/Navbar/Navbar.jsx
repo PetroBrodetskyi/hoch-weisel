@@ -8,6 +8,12 @@ const Navbar = () => {
     const { t, i18n } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
+    const languages = [
+        { code: 'de', label: 'DE', id: 'flag-germany' },
+        { code: 'ua', label: 'UA', id: 'flag-ukraine' },
+        { code: 'en', label: 'EN', id: 'flag-kingdom' }
+    ];
+
     useEffect(() => {
         const handleLanguageChanged = (lng) => {
             setSelectedLanguage(lng);
@@ -24,12 +30,6 @@ const Navbar = () => {
         i18n.changeLanguage(lng);
     };
 
-    const languages = [
-        { code: 'de', label: 'DE', flag: 'flag-germany' },
-        { code: 'ua', label: 'UA', flag: 'flag-ukraine' },
-        { code: 'en', label: 'EN', flag: 'flag-kingdom' }
-    ];
-
     return (
         <nav className={css.navLanguage}>
             <ul className={css.links}>
@@ -38,7 +38,7 @@ const Navbar = () => {
                 <li><Link className={css.link} to="/history">{t('history.title')}</Link></li>
             </ul>
             <div className={css.buttons}>
-                {languages.map(({ code, label, flag }) => (
+                {languages.map(({ code, label, id }) => (
                     <div key={code} className={css.radioItem}>
                         <input
                             className={css.radio}
@@ -51,7 +51,7 @@ const Navbar = () => {
                         />
                         <label htmlFor={code} className={`${css.btn} ${selectedLanguage === code ? css.selected : ''}`}>
                             <svg className={css.icon}>
-                                <use xlinkHref={`${icons}#${flag}`} />
+                                <use href={`${icons}#${id}`}></use>
                             </svg>
                             <p className={css.labelTitle}>{label}</p>
                         </label>
