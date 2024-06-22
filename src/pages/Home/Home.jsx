@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Article from '../../components/Article/Article';
 import hochweiselLogo from '../../assets/images/hochweisel.png';
+import HomeCarousel from '../../components/HomeCarousel/HomeCarousel';
 import css from '../Home/Home.module.css';
-import GaleryCarousel from '../../components/Carousel/GaleryCarousel';
 
-const Home = ({articleKey}) => {
+const Home = ({ articleKey }) => {
   const { t } = useTranslation();
 
   return (
@@ -20,7 +20,7 @@ const Home = ({articleKey}) => {
         </div>
       </div>
       <div>
-        <GaleryCarousel />
+        <HomeCarousel />
       </div>
     </div>
   );
