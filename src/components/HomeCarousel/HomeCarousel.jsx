@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import CustomModal from '../Modal/CustomModal';
 import './HomeCarousel.css';
+import css from './HomeCarousel.module.css';
 
 function HomeCarousel() {
   const [showModal, setShowModal] = useState(false);
@@ -57,7 +58,7 @@ function HomeCarousel() {
   };
 
   return (
-    <>
+    <div className={css.container}>
       <Carousel 
         responsive={responsive}
         infinite={true}
@@ -78,7 +79,7 @@ function HomeCarousel() {
       {showModal && <CustomModal isOpen={showModal} onClose={closeModal}>
         <img src={currentImage} alt="Image" className="modal-image"/>
       </CustomModal>}
-    </>
+    </div>
   );
 }
 

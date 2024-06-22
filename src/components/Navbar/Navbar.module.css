@@ -56,7 +56,7 @@
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: px;
 }
 
 .radioItem {
@@ -69,9 +69,11 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     border-radius: 8px;
-    padding: 2px 18px;
+    width: 80px;
+    padding: 2px;
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
