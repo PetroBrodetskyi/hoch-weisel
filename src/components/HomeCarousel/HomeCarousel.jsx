@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Modal from '../Modal/Modal';
+import CustomModal from '../Modal/CustomModal';
 import './HomeCarousel.css';
 
 function HomeCarousel() {
@@ -10,28 +10,20 @@ function HomeCarousel() {
 
   const images = [
     {
-      src: 'https://i.postimg.cc/KkdTK0BJ/image1.jpg',
-      alt: 'First slide',
-      caption: 'First slide label',
-      description: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+      src: 'https://i.postimg.cc/d30jxX1P/Backhausstra-e.jpg/image1.jpg',
+      alt: 'Backhausstra',
     },
     {
-      src: 'https://i.postimg.cc/p9czvWTN/image2.jpg',
-      alt: 'Second slide',
-      caption: 'Second slide label',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      src: 'https://i.postimg.cc/Twf9rhvP/Burggasse.jpg/image2.jpg',
+      alt: 'Burggasse',
     },
     {
-      src: 'https://i.postimg.cc/sG7h55Jy/image3.jpg',
-      alt: 'Third slide',
-      caption: 'Third slide label',
-      description: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+      src: 'https://i.postimg.cc/rsYNXJ0d/Hausbergstra-e.jpg/image3.jpg',
+      alt: 'Hausbergstra',
     },
     {
-      src: 'https://i.postimg.cc/jwWNdpwD/image4.jpg',
-      alt: 'Fourth slide',
-      caption: 'Fourth slide label',
-      description: 'Phasellus vestibulum lorem sed risus ultricies tristique nulla.'
+      src: 'https://i.postimg.cc/fLCv5ZMf/Rathaus.jpg.jpg',
+      alt: 'Rathaus',
     }
   ];
 
@@ -80,14 +72,12 @@ function HomeCarousel() {
               src={image.src}
               alt={image.alt}
             />
-            <div className="carousel-caption">
-              <h5>{image.caption}</h5>
-              <p>{image.description}</p>
-            </div>
           </div>
         ))}
       </Carousel>
-      {showModal && <Modal showModal={showModal} closeModal={closeModal} imagePath={currentImage} />}
+      {showModal && <CustomModal isOpen={showModal} onClose={closeModal}>
+        <img src={currentImage} alt="Image" className="modal-image"/>
+      </CustomModal>}
     </>
   );
 }
