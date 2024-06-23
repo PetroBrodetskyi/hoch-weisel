@@ -16,6 +16,7 @@ const Home = () => {
 
   return (
     <div className={css.homeFlex}>
+      
       <div className={css.home}>
         <div className={css.container}>
           <p>{homeData.description}</p>
@@ -36,7 +37,16 @@ const Home = () => {
         <div className={css.container}>
           {homeData.article2 && <Article articleData={homeData.article2} />}
         </div>
-        
+      </div>
+      <div className={css.home}>
+        <div className={css.container}>
+          {homeData.article3 && <Article articleData={homeData.article3} />}
+        </div>
+        <div className={css.photo}>
+          {homeData.article2 && (
+            <img src={homeData.article3.image} alt={homeData.article3.title} className={css.view} />
+          )}
+        </div>
       </div>
       <HomeCarousel />
     </div>

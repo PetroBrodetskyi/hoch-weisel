@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import css from './Header.module.css';
 import hochweiselLogo from '../../assets/images/hochweisel.png';
 import Navbar from '../Navbar/Navbar';
@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className={css.headerContainer}>
             <div className={css.header}>
-                <div>
+                <div className={css.content}>
                     <div className={css.logoContainer}>
                         <Link to="/" className={css.logoLink}>
                             <div className={css.logoFlex}>

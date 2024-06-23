@@ -32,11 +32,13 @@ const Navbar = () => {
 
     return (
         <nav className={css.navLanguage}>
-            <ul className={css.links}>
-                <li><NavLink className={css.link} to="/">{selectedLanguage === 'en' ? 'Home' : selectedLanguage === 'de' ? 'Zuhause' : 'Домашня'}</NavLink></li>
-                <li><NavLink className={css.link} to="/events">{selectedLanguage === 'en' ? 'Events' : selectedLanguage === 'de' ? 'Veranstaltungen' : 'Події'}</NavLink></li>
-                <li><NavLink className={css.link} to="/history">{selectedLanguage === 'en' ? 'History' : selectedLanguage === 'de' ? 'Geschichte' : 'Історія'}</NavLink></li>
-            </ul>
+            <div className={css.content}>
+                <ul className={css.links}>
+                    <li><NavLink className={css.link} to="/">{selectedLanguage === 'en' ? 'Home' : selectedLanguage === 'de' ? 'Zuhause' : 'Домашня'}</NavLink></li>
+                    <li><NavLink className={css.link} to="/events">{selectedLanguage === 'en' ? 'Events' : selectedLanguage === 'de' ? 'Veranstaltungen' : 'Події'}</NavLink></li>
+                    <li><NavLink className={css.link} to="/history">{selectedLanguage === 'en' ? 'History' : selectedLanguage === 'de' ? 'Geschichte' : 'Історія'}</NavLink></li>
+                </ul>
+            </div>
             <div className={css.buttons}>
                 {languages.map(({ code, label, id }) => (
                     <div key={code} className={css.radioItem}>

@@ -48,7 +48,10 @@ a:hover {
 
 body {
   margin: 0;
-  background-color: #545454;
+  background-image: url(./assets/images/hoch.png);
+  background-size: cover;
+    background-position: center center;
+  /* background-color: #545454; */
 }
 
 img {

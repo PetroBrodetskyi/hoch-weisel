@@ -48,6 +48,7 @@ function HomeCarousel() {
   return (
     <div className={css.container}>
       <Carousel
+        arrows={false}
         showDots={true}
         responsive={responsive}
         infinite={true}

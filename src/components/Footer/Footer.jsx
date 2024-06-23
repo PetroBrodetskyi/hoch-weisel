@@ -1,5 +1,5 @@
+import React from 'react';
 import css from './Footer.module.css';
-import hochweiselLogo from '../../assets/images/hochweisel.png';
 
 const Footer = () => {
     return (
