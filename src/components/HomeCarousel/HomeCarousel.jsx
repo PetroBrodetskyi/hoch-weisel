@@ -2,31 +2,12 @@ import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import CustomModal from '../Modal/CustomModal';
-import './HomeCarousel.css';
 import css from './HomeCarousel.module.css';
+import data from '../../data/base.json';
 
 function HomeCarousel() {
   const [showModal, setShowModal] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
-
-  const images = [
-    {
-      src: 'https://i.postimg.cc/d30jxX1P/Backhausstra-e.jpg/image1.jpg',
-      alt: 'Backhausstra',
-    },
-    {
-      src: 'https://i.postimg.cc/Twf9rhvP/Burggasse.jpg/image2.jpg',
-      alt: 'Burggasse',
-    },
-    {
-      src: 'https://i.postimg.cc/rsYNXJ0d/Hausbergstra-e.jpg/image3.jpg',
-      alt: 'Hausbergstra',
-    },
-    {
-      src: 'https://i.postimg.cc/fLCv5ZMf/Rathaus.jpg.jpg',
-      alt: 'Rathaus',
-    }
-  ];
 
   const responsive = {
     superLargeDesktop: {
@@ -57,16 +38,25 @@ function HomeCarousel() {
     setCurrentImage('');
   };
 
+  const homeData = data.home;
+  const carouselImages = data.images;
+
+  if (!homeData || !carouselImages) {
+    return null;
+  }
+
   return (
     <div className={css.container}>
-      <Carousel 
+      <Carousel
+        showDots={true}
         responsive={responsive}
         infinite={true}
         autoPlay={true}
         autoPlaySpeed={3000}
         transitionDuration={500}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
       >
-        {images.map((image, index) => (
+        {carouselImages.map((image, index) => (
           <div key={index} onClick={() => openModal(image.src)}>
             <img
               className="carousel-image"
@@ -76,9 +66,11 @@ function HomeCarousel() {
           </div>
         ))}
       </Carousel>
-      {showModal && <CustomModal isOpen={showModal} onClose={closeModal}>
-        <img src={currentImage} alt="Image" className="modal-image"/>
-      </CustomModal>}
+      {showModal && (
+        <CustomModal isOpen={showModal} onClose={closeModal}>
+          <img src={currentImage} alt="Image" className="modal-image" />
+        </CustomModal>
+      )}
     </div>
   );
 }

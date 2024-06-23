@@ -5,7 +5,7 @@ import css from './Navbar.module.css';
 import icons from '../../assets/icons/icons.svg';
 
 const Navbar = () => {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
     const languages = [
@@ -33,9 +33,9 @@ const Navbar = () => {
     return (
         <nav className={css.navLanguage}>
             <ul className={css.links}>
-                <li><NavLink className={({ isActive }) => isActive ? `${css.link} ${css.active}` : css.link} to="/">{t('home.title')}</NavLink></li>
-                <li><NavLink className={({ isActive }) => isActive ? `${css.link} ${css.active}` : css.link} to="/events">{t('events.title')}</NavLink></li>
-                <li><NavLink className={({ isActive }) => isActive ? `${css.link} ${css.active}` : css.link} to="/history">{t('history.title')}</NavLink></li>
+                <li><NavLink className={css.link} to="/">{selectedLanguage === 'en' ? 'Home' : selectedLanguage === 'de' ? 'Zuhause' : 'Домашня'}</NavLink></li>
+                <li><NavLink className={css.link} to="/events">{selectedLanguage === 'en' ? 'Events' : selectedLanguage === 'de' ? 'Veranstaltungen' : 'Події'}</NavLink></li>
+                <li><NavLink className={css.link} to="/history">{selectedLanguage === 'en' ? 'History' : selectedLanguage === 'de' ? 'Geschichte' : 'Історія'}</NavLink></li>
             </ul>
             <div className={css.buttons}>
                 {languages.map(({ code, label, id }) => (

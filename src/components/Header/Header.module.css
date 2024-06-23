@@ -5,7 +5,9 @@
     position: fixed;
     padding: 20px;
     width: 1280px;
-    background-color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #ffffff;
     z-index: 100;
 }
 

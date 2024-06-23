@@ -1,18 +1,16 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import enTranslation from '../src/locales/articles/articleen.json';
-import deTranslation from '../src/locales/articles/articlede.json';
-import uaTranslation from '../src/locales/articles/articleua.json';
+import baseData from '../src/data/base.json'; // Шлях до вашого нового JSON файлу
 
 const resources = {
   en: {
-    translation: enTranslation
+    translation: baseData
   },
   de: {
-    translation: deTranslation
+    translation: baseData
   },
   ua: {
-    translation: uaTranslation
+    translation: baseData
   }
 };
 

@@ -1,11 +1,4 @@
 .article {
-    padding: 20px;
     text-align: left;
+    text-indent: 20px;
 }
-
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-

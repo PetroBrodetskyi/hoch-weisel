@@ -1,22 +1,45 @@
 .homeFlex {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
+    padding-top: 180px;
 }
 
 .container {
-    width: 80%;
+    background-color: #fff;
+    height: 398px;
+    overflow: auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
 }
 
 .home {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    padding-top: 200px;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.photo {
+    flex: 0 0 auto;
 }
 
 .image {
-    display: flex;
+    max-width: 100%;
+    height: auto;
+    max-height: 398px;
+    border-radius: 12px;
+    background-color: #fff;
     padding: 20px;
-    width: 300px;
+}
+
+.view {
+    max-width: 100%;
+    height: auto;
+    max-height: 398px;
+    border-radius: 12px;
+    background-color: #fff;
 }
