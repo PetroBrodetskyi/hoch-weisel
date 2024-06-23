@@ -48,6 +48,37 @@ const Home = () => {
           )}
         </div>
       </div>
+      <div className={css.home}>
+        
+        <div className={css.photo}>
+          {homeData.article2 && (
+            <img src={homeData.article3.image} alt={homeData.article3.title} className={css.view} />
+          )}
+        </div>
+        <div className={css.photo}>
+          {homeData.article2 && (
+            <img src={homeData.article3.image} alt={homeData.article3.title} className={css.view} />
+          )}
+        </div>
+        <div className={css.container}>
+          {homeData.article3 && <Article articleData={homeData.article3} />}
+        </div>
+      </div>
+      <div className={css.home}>
+        <div className={css.photo}>
+          {homeData.article2 && (
+            <img src={homeData.article3.image} alt={homeData.article3.title} className={css.view} />
+          )}
+        </div>
+        <div className={css.container}>
+          {homeData.article3 && <Article articleData={homeData.article3} />}
+        </div>
+        <div className={css.photo}>
+          {homeData.article2 && (
+            <img src={homeData.article3.image} alt={homeData.article3.title} className={css.view} />
+          )}
+        </div>
+      </div>
       <HomeCarousel />
     </div>
   );
